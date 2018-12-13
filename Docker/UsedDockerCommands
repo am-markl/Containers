@@ -1,0 +1,31 @@
+  281  docker ps
+  282  docker ps
+  283  docker ps --all
+  284  docker ps --all
+  285  docker system prune
+  286  docker ps --all
+  287  docker --help
+  288  docker create busybox echo hi there
+  289  docker start 3ba353334173062f7236936e7da05f4c60420f3cd64e3a14ee0f1c029cb15ff0
+  290  docker log 3ba353334173062f7236936e7da05f4c60420f3cd64e3a14ee0f1c029cb15ff0
+  291  docker logs 3ba353334173062f7236936e7da05f4c60420f3cd64e3a14ee0f1c029cb15ff0
+  292  docker prune all
+  293  docker create busybox ping google.,com
+  294  docker start 0ff13a0d52c9db43f564bade8c92485099110935a2ef6a4290feb0bbde934b1b
+  295   docker logs 0ff13a0d52c9db43f564bade8c92485099110935a2ef6a4290feb0bbde934b1b
+  296  docker ps
+  297  docker create ping google.com
+  298  docker ps
+  299  docker create busybox ping google.com
+  300  docker start 2689552bc81bed376cb8bbdb8b5d4e95a79f4b740905a6e4e26c5d458c9bcf66
+  301  docker log 2689552bc81bed376cb8bbdb8b5d4e95a79f4b740905a6e4e26c5d458c9bcf66
+  302  docker logs 2689552bc81bed376cb8bbdb8b5d4e95a79f4b740905a6e4e26c5d458c9bcf66
+  303  docker ps
+  304  docker ps
+  305  docker stop 2689552bc81bed376cb8bbdb8b5d4e95a79f4b740905a6e4e26c5d458c9bcf66
+  306  docker ps
+  307  docker ps
+  308  docker --help
+  309  docker images
+  310  docker images --help
+  311  docker run redis
