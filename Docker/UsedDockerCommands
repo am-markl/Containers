@@ -40,5 +40,12 @@
   452  docker build .
   458  docker-compose up --build
   468  docker-compose up -d
-  469  docker-compose down  
-  
+  469  docker-compose down
+
+  # This docker command runs the container with port mapping (3000 to 3000) with the volume flags
+  # -v /app/node_modules is to configure the container to use this folder and this folder only
+  # -v $(pwd):/app is to configure the container to map the currrent directory (as in $pwd) to the current working directory
+  docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app d732e4599ea3 
+
+# This docker command is to get into the unix shell to peek into its working directory. Container must be up and running for this to work.
+docker exec -it 783766d91d14 sh
