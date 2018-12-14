@@ -1,0 +1,1 @@
+This is a simple sample add that uses docker compose, a yml file that builds an image with two different containers.
