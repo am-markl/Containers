@@ -49,3 +49,10 @@
 
 # This docker command is to get into the unix shell to peek into its working directory. Container must be up and running for this to work.
 docker exec -it 783766d91d14 sh
+
+# This docker command builds the image, -f to specify the development Dockerfile, -t to tag the container ID. 
+# The period at the end is to specify the current directory. 
+docker build -f Dockerfile.dev -t mttlong/reactwebapp .
+
+# This docker command runs the container's test suite
+docker run -it mttlong/reactwebapp npm run test
