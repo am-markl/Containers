@@ -29,3 +29,14 @@
   309  docker images
   310  docker images --help
   311  docker run redis
+ 441  docker buid -t mttlong/visits:latest .
+  442  docker build -t mttlong/visits:latest .
+  443  docker build -t mttlong/visits:latest .
+  444  docker build -t mttlong/visits:latest .
+  445   pwd
+  446  ls
+  447  docker-compose up
+  451  docker-compose up --build
+  452  docker build .
+  458  docker-compose up --build
+  
