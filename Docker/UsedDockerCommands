@@ -56,3 +56,30 @@ docker build -f Dockerfile.dev -t mttlong/reactwebapp .
 
 # This docker command runs the container's test suite
 docker run -it mttlong/reactwebapp npm run test
+
+#How to deploy to Google Cloud Platform
+  174  gcloud config set project $PROJECT_ID
+  175  gcloud config set compute/zone us-central1-b
+  176  gcloud auth configure-docker
+  177  docker run --rm -p 8080:8080 gcr.io/${PROJECT_ID}/hello-app:v1
+  178  gcloud container clusters create hello-cluster --num-nodes=3
+  179  gcloud compute instances list
+  180  kubectl run hello-web --image=gcr.io/${PROJECT_ID}/hello-app:v1 --port 8080
+  181  kubectl get pods
+  182  kubectl expose deployment hello-web --type=LoadBalancer --port 80 --target-port 8080
+  183  kubectl get service
+  184  kubectl delete service hello-web
+  185  gcloud container clusters delete hello-cluster
+  186  gcloud config set project genuine-ether-223804
+  187  gcloud config set compute/zone us-central1-b
+  188  docker run -rm -p 8080:8080 gcr.io/genuine-ether-223804/node-web-app
+  189  docker run --rm -p 8080:8080 gcr.io/genuine-ether-223804/node-web-app
+  190  gcloud container clusters create hello-cluster --num-nodes=3
+  191  gcloud compute instances list
+  192  gcloud container clusters get-credentials hello-cluster
+  193  kubectl run hello-web --image=gcr.io/genuine-ether-223804/node-web-app --port 8080
+  194  kubectl get pods
+  195  kubectl expose deployment hello-web --type=LoadBalancer --port 80 --target-port 8080
+  196  kubectl get service
+  197  kubectl delete service hello-web
+  198  gcloud container clusters delete hello-cluster
